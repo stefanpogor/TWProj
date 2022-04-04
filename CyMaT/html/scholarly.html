@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link rel="stylesheet" href="../css/scholarly_style.css">
+    <title>Scholarly HTML</title>
+</head>
+
+<body prefix="schema: http://schema.org" itemscope="" itemtype="http://schema.org/WebPage">
+    <h1>CyMaT - Scholarly </h1>
+    <section typeof="sa:AuthorsList">
+        <h2>Autori</h2>
+        <ul>
+            <li typeof="sa:ContributorRole" property="schema:author">
+                <a typeof="schema:Person" href="https://github.com/stefanpogor">
+                    <meta property="schema:givenName" content="Ștefan" />
+                    <meta property="schema:familyName" content="Pogor" />
+                    <span property="schema:name">Ștefan Pogor</span>
+                </a>
+                <ul>
+                    <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                        <p>E-mail: pogorstefan@gmail.com</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li typeof="sa:ContributorRole" property="schema:author">
+                <a typeof="schema:Person" href="https://github.com/evelynatincu">
+                    <meta property="schema:givenName" content="Evelyna" />
+                    <meta property="schema:familyName" content="Tincu" />
+                    <span property="schema:name">Evelyna Tincu</span>
+                </a>
+                <ul>
+                    <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                        <p>E-mail: tincu_evelyna@yahoo.com</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <h2>Cuprins</h2>
+    <ul>
+        <li><a href="#introducere">Introducere</a> </li>
+    </ul>
+    <ul>
+        <li><a href="#scop">1.1 Scop</a></li>
+        <li><a href="#audienta">1.2 Audiență țintă</a></li>
+        <li><a href="#scop-site">1.3 Scopul sitului</a> </li>
+        <li><a href="#referinte">1.4 Referințe</a></li>
+    </ul>
+
+    <ul>
+        <li><a href="#descriere">Descriere</a> </li>
+    </ul>
+    <ul>
+        <li><a href="#perspectiva">1.1 Perspectiva produsului</a></li>
+        <li><a href="#functionalitati-produs">1.2 Funcționalitățile produsului</a></li>
+        <li><a href="#categorii">1.3 Categorii de utilizatori</a></li>
+        <li><a href="#mediu">1.4 Mediu de operare</a></li>
+        <li><a href="#design">1.5 Design și constrângeri de implementare</a></li>
+    </ul>
+    <ul>
+        <li><a href="#cerinte-ext">Cerințe externe</a> </li>
+    </ul>
+    <ul>
+        <li><a href="#interfata-utilizator">1.1 Interfață utilizator</a></li>
+        <li><a href="#interfata-soft">1.2 Interfață software</a></li>
+        <li><a href="#interfata-comunicare">1.3 Interfață de comunicare</a></li>
+    </ul>
+
+    <ul>
+        <li><a href="#functionalitati">Funcționalități</a> </li>
+    </ul>
+    <ul>
+        <li><a href="#autentif-inreg">1.1 Autentificare/Înregistrare</a></li>
+        <li><a href="#realizare-programare">1.2 Realizarea unei programări și descrierea problemei de către client</a>
+        </li>
+        <li><a href="#admin-cereri">1.3 Administrator - Cereri</a></li>
+        <li><a href="#admin-stocuri">1.4 Administrator - Stocuri</a></li>
+        <li><a href="#admin-comenziF">1.5 Administrator - Comenzi furnizor</a></li>
+        <li><a href="#admin-import">1.6 Administrator - Import</a></li>
+        <li><a href="#admin-export">1.7 Administrator - Export</a></li>
+        <li><a href="#contact">1.8 Contact</a></li>
+    </ul>
+    <ul>
+        <li><a href="#cerinte">Cerințe non-funcționale</a> </li>
+    </ul>
+    <ul>
+        <li><a href="#bibliografie">Bibliografie</a> </li>
+    </ul>
+
+    <article id="article" typeof="schema:ScholarlyArticle" resource="#">
+        <section typeof="sa:ScholarlyArticle" role="doc-introduction">
+            <h2 id="introducere">Introducere</h2>
+            <h3 id="scop">1.1 Scop</h3>
+            <p>
+                Site-ul CyMaT reprezintă un sistem online de management al programărilor și stocurilor unui service de
+                biciclete.
+                Scopul principal al sitului este de a ajuta administratorul să-și gestioneze mai ușor operațiunile și de
+                a ajuta clientul
+                să-și repare bicicleta sau să schimbe anumite piese.
+            </p>
+            <h3 id="audienta">1.2 Audiența țintă</h3>
+            <p>
+                Acest document este destinat tuturor persoanelor deținătoare de bicicletă, ce doresc să afle mai multe
+                informații despre site, cum ar fi: cum se poate face o rezervare
+                la service sau, în cazul unui administrator, cum să-și gestioneze operațiunile din cadrul service-ului.
+            </p>
+            <h3 id="scop-site">1.3 Scopul sitului</h3>
+            <p>
+                Site-ul are scopul de a ajuta administratorul service-ului să-și gestioneze cât mai ușor operațiunile,
+                iar clienților le pune la dispoziție o metodă de a realiza ușor o programare la service
+                într-o zi disponibilă pentru reparații sau pentru cumpărare de produse aflate în stoc pentru bicicletele
+                personale.
+            </p>
+            <h3 id="referinte">1.4 Referințe</h3>
+            <p>Pentru a putea realiza o interfață a site-ului cât mai atractivă și ușor de folosit, am analizat câteva
+                situri: </p>
+            <a href="https://www.w3schools.com/css/">w3schools.com</a>
+        </section>
+
+        <section typeof="sa:MaterialsAndMethods" role="doc-chapter">
+            <h2 id="descriere">Descriere</h2>
+            <h3 id="perspectiva">1.1 Perspectiva produsului</h3>
+            <p>
+                Produsul își propune gestionarea operațiunilor unui service de biciclete (programări, stocuri etc.).
+            </p>
+            <h3 id="functionalitati-produs">1.2 Funcționalitățile produsului</h3>
+            <p>
+                Cu ajutorul sitului, administratorul unui service de biciclete va putea respinge/aproba programări din
+                partea clienților; va avea posibilitatea de a iși gestiona produsele (preț, stoc, adăugare produs nou);
+                va putea trimite comenzi de piese către furnizori. De altfel, va avea și posibilitatea de a importa
+                fișiere .csv/.json care conțin produse/comenzi furnizori într-un mod mai rapid decât dacă ar fi
+                introduse pe rând,
+                de asemenea va putea și exporta astfel de date.
+            </p>
+            <p>
+                Clientul va avea posibilitatea de a trimite o întrebare/realiza o programare către service pentru a-și
+                putea rezolva problemele tehnice ce țin de biciclete. Acesta va fi nevoit să aștepte un răspuns din
+                partea administratorului.
+            </p>
+            <h3 id="categorii">1.3 Categorii de utilizatori</h3>
+            <p>
+                Situl va putea fi folosit de orice persoană obișnuită cu cunoștințe minime de navigare pe un site, fiind
+                intuitiv și ușor de utilizat, și care are în posesie o bicicletă.
+            </p>
+            <h3 id="mediu">1.4 Mediu de operare</h3>
+            <p>
+                CyMaT este o aplicație WEB ce folosește HTML și CSS, deci poate fi rulată în orice browser.
+            </p>
+            <h3 id="design">1.5 Design și constrângeri de implementare</h3>
+            <p>
+                Excluzând formatul imaginilor ce va trebui respectat și tipul fișierelor ce pot fi încărcate pe sit,
+                putem concluziona că nu există alte constrângeri de implementare/design, luând în considerare și
+                funcționalitățile existente.
+            </p>
+        </section>
+
+        <section typeof="sa:MaterialsAndMethods" role="doc-chapter">
+            <h2 id="cerinte-ext">Cerințe externe</h2>
+            <h3 id="interfata-utilizator">1.1 Interfață utilizator</h3>
+            <p> Formular Client </p>
+            <img src="../scholarly_images/form_client.png" alt="form_client" style="width:600px;">
+            <p> Raspunsuri Client </p>
+            <img src="../scholarly_images/rasp_client.png" alt="rasp_client" style="width:600px;">
+            <p> Administrator - Cereri </p>
+            <img src="../scholarly_images/admin_cereri.png" alt="admin-cereri" style="width:600px;">
+            <p> Administrator - Stocuri </p>
+            <img src="../scholarly_images/admin_stocuri.png" alt="admin-stocuri" style="width:600px;">
+            <p> Administrator - Comenzi Furnizor </p>
+            <img src="../scholarly_images/admin_comenzi.png" alt="admin-comenziF" style="width:600px;">
+            <p> Administrator - Import </p>
+            <img src="../scholarly_images/admin_import.png" alt="admin-import" style="width:600px;">
+            <p> Administrator - Export </p>
+            <img src="scholarly_images/admin_export.png" alt="admin-export" style="width:600px;">
+            <p> Contact </p>
+            <img src="../scholarly_images/contact.png" alt="contact" style="width:600px;">
+            <p> Login </p>
+            <img src="../scholarly_images/login.png" alt="login" style="width:600px;">
+            <p> Sign Up </p>
+            <img src="../scholarly_images/sign_up.png" alt="sign_up" style="width:600px;">
+
+            <h3 id="interfata-soft">1.2 Interfață software</h3>
+            <p>
+                Aplicația se conectează la o bază de date relațională pentru a putea stoca atât datele utilizatorilor,
+                cât și programările, produsele, comenzile către furnizori etc..
+            </p>
+            <h3 id="interfata-comunicare">1.3 Interfață de comunicare</h3>
+            <p>
+                User-ul și server-ul folosesc protocolul de comunicare HTTP pentru a interacționa.
+            </p>
+        </section>
+        <section typeof="sa:MaterialsAndMethods" role="doc-chapter">
+            <h2 id="functionalitati">Funcționalități</h2>
+            <h3 id="autentif-inreg">1.1 Autentificare/Înregistrare</h3>
+            <p>
+                User-ul care deține deja un cont va introduce numele de utilizator și parola pentru autentificare,
+                respectiv user-ul care nu are un cont va introduce
+                pe lângă acestea și adresa de e-mail și numele complet pentru crearea unui cont. Datele introduse, după
+                validare, vor fi trimise către server.
+            </p>
+            <h3 id="realizare-programare">1.2 Realizarea unei programări și descrierea problemei de către client</h3>
+            <p>
+                Clientul service-ului va putea completa un formular în care trebuie să aleagă o zi dintre cele
+                disponibile și va trebui să completeze spațiul special alocat
+                descrierii problemei ce urmează a fi evaluată de către administrator. Cererea lui va fi fie acceptată,
+                fie refuzată după evaluare. Răspunsul va fi afișat după formular.
+            </p>
+            <h3 id="admin-cereri">1.3 Administrator - Cereri</h3>
+            <p>
+                Persoana responsabilă de evaluarea cererilor trimise de către clienți va putea accesa secțiunea "Cereri"
+                din cadrul sitului, după autentificare, unde are posibilitatea de
+                a trimite un mesaj de răspuns și prețul aferent serviciilor prestate. Acesta va trebui să accepte sau
+                refuze (în funcție de situație) o cerere pentru a putea fi trimis mesajul către client.
+            </p>
+            <h3 id="admin-stocuri">1.4 Administrator - Stocuri</h3>
+            <p>
+                În această secțiune administratorul va putea adăuga un produs nou după completarea formularului sau va
+                putea actualiza prețul/stocul produselor deja existente.
+            </p>
+            <h3 id="admin-comenziF">1.5 Administrator - Comenzi furnizor</h3>
+            <p>
+                Aici vor putea fi vizualizate informații legate de comenzile plasate către un anumit furnizor, cum ar
+                fi: estimat de livrare, preț, cantitate comandată etc.. De altfel, vor putea fi plasate
+                și comenzi noi către un furnizor.
+            </p>
+            <h3 id="admin-import">1.6 Administrator - Import</h3>
+            <p>
+                Administratorul va avea posibilitatea importării de fișiere .csv/.json în care pot exista mai multe
+                produse/comenzi către furnizori ce vor fi încărcate automat în cadrul sitului, astfel evitând plasarea
+                lor manual, rând pe rând.
+            </p>
+            <h3 id="admin-export">1.7 Administrator - Export</h3>
+            <p>
+                În cadrul acestei secțiuni administratorul va putea exporta în format .csv/.json/.pdf produsele
+                existente pe site sau comenzile către furnizori, având posibilitatea de modificare și reîncărcarea
+                ulterioară pe sit, folosind secțiunea import.
+            </p>
+            <h3 id="contact">1.8 Contact</h3>
+            <p>
+                Clienții vor putea lua legătura cu administratorul sitului pentru orice eventuale probleme sau
+                întrebări.
+            </p>
+        </section>
+        <section typeof="sa:MaterialsAndMethods" role="doc-chapter">
+            <h2 id="cerinte">Cerințe non-funcționale</h2>
+            <p>Aplicația WEB este una sigură, posibile probleme ar putea apărea din partea bazei de date folosite.</p>
+            <p>Aplicația va fi protejată împotriva atacurilor de tip SQL-injection.</p>
+        </section>
+        <section typeof="sa:ReferenceList" role="doc-bibliography">
+            <h2 id="bibliografie">Bibliografie</h2>
+            <ol>
+                <li property="schema:citation" role="doc-biblioentry" typeof="schema:WebPage"
+                    resource="https://www.w3schools.com">
+                    <cite property="schema:name">
+                        <a href="https://www.w3schools.com">W3 schools</a>
+                    </cite>
+                </li>
+                <li property="schema:citation" role="doc-biblioentry" typeof="schema:WebPage"
+                    resource="https://w3c.github.io/scholarly-html/">
+                    <cite property="schema:name">
+                        <a href="https://w3c.github.io/scholarly-html/">Scholarly HTML</a>
+                    </cite>
+                </li>
+                <li property="schema:citation" role="doc-biblioentry" typeof="schema:WebPage"
+                    resource="https://schema.org/Person">
+                    <cite property="schema:name">
+                        <a href="https://schema.org/Person">Scholarly Person</a>
+                    </cite>
+                </li>
+            </ol>
+        </section>
+    </article>
+</body>
+
+</html>
