@@ -1,0 +1,118 @@
+.focused{
+    background-color: cadetblue 
+}
+
+.right-content {
+    grid-area: right-content;
+    padding: 20px 0px 0px 20px;
+}
+
+.stoc-card {
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+    padding: 15px 15px 15px 15px;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-areas: "info imag";
+    align-items: center;
+}
+
+.stoc-card p {
+    font-size: 13px;
+    margin: 4px 4px 4px 0px;
+}
+
+.info {
+    grid-area: info;
+}
+
+.imag {
+    grid-area: imag;
+    margin: auto;
+}
+
+.imag img {
+    width: 100px;
+}
+
+.act {
+    background-color: cadetblue;
+    border: 0;
+    border-radius: 8px;
+    color: white;
+    width: auto;
+    height: 35px;
+    margin: 5px 5px 5px 0px;
+}
+
+label {
+    font-size: 13px;
+}
+
+.new_val {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-family: monospace;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.produs_nou_card {
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+    padding: 15px 15px 15px 15px;
+    margin-top: 10px;
+}
+
+.produs_nou {
+    text-align: center;
+}
+
+.send_com {
+    background-color: cadetblue;
+    border: 0;
+    border-radius: 8px;
+    color: white;
+    width: auto;
+    height: 35px;
+}
+
+label {
+    font-size: 13px;
+}
+
+.com_form {
+    width: 300px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-family: monospace;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    display: block;
+    margin: auto auto 10px auto;
+}
+
+@media screen and (min-width: 320px) and (max-width: 550px) {
+    .right-content {
+        padding: 0;
+        text-align: center;
+    }
+
+    .stoc-card {
+        grid-template-areas: "imag" "info";
+        grid-template-columns: auto;
+        grid-template-rows: 30% 70%;
+        justify-content: center;
+    }
+
+    .imag img {
+        width: 200px;
+    }
+
+    .produs_nou_card {
+        padding: 0;
+        padding-top: 15px;
+        padding-bottom: 15px;;
+    }
+}
