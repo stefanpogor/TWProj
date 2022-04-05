@@ -1,0 +1,197 @@
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    padding-bottom: 51px;
+    position: relative;
+    min-height: 100vh;
+}
+
+li, a {
+    font-size: 13px;
+    color: black;
+    text-decoration: none;
+}
+
+header {
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    display: flow-root;
+    margin-right: 10px;
+}
+
+.logo {
+    width: 100px;
+    cursor: pointer;
+    margin-left: 10px;
+    float: left;
+    padding-top: 7px;
+}
+
+.nav_links {
+    text-decoration: none;
+    float: right;
+}
+
+.nav_links li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.nav_links li, a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: cadetblue;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "form-area"
+        "response-area";
+    padding-top: 40px;
+}
+
+.form-area {
+    width: 700px;
+    margin: auto;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+div.response-area{
+    margin: auto;
+}
+
+input[type=text], select {
+    padding: 12px 20px;
+    border-radius: 4px;
+  }
+  
+input[type=submit] {
+    width: 100px;
+    background-color: cadetblue;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: grid;
+    margin: 15px auto 15px auto;
+  }
+
+label {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.input-form {
+    width: 500px;
+    box-sizing: border-box;
+    font-family: monospace;
+    border: 1px solid #ccc;
+    display: block;
+    margin: auto auto 10px auto;
+}
+
+.req-form {
+    display: block;
+    margin: auto auto 10px auto;
+    width: 500px;
+    box-sizing: border-box;
+}
+
+.problem-box{
+    width: 500px;
+    height: 30px;  
+    outline: 0;
+    padding-bottom: 150px;
+    margin: auto;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow-wrap: break-word;
+}
+
+textarea {
+    resize: none;
+  }
+
+h3 {
+    text-align: center;
+   }
+
+hr {
+    border: 0;
+    height: 5px;
+    background-color: cadetblue;
+    margin: 0;
+}
+
+.header_band{
+    background: cadetblue;
+    color: white;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+    padding: 15px 15px 15px 15px;
+    margin-top: 10px;
+}
+
+.response-area{
+    width: 700px;
+}
+
+.header_band h3{
+    text-align: left;
+}
+
+.comanda-card {
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+    padding: 15px 15px 15px 15px;
+    margin-top: 10px;
+}
+
+.comanda-card p{
+    font-size: 13px;
+    margin: 4px 4px 4px 0px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .form-area{
+        width: 310px;
+        box-sizing: border-box;
+        display: block;
+    }
+
+    .req-form{
+        width: 250px;
+    }
+
+    .response-area{
+        width: 310px;
+    }
+
+    .input-form, .problem-box {
+        width: 250px;
+    }
+    
+    .form-area h3 {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 709px) {
+    .form-area, .response-area{
+        width: 470px;
+    }
+    .input-form, .problem-box, .req-form {
+        width: 340px;
+    }
+}

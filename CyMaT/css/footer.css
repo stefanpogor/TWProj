@@ -1,0 +1,21 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    background-color: black;
+    text-align: center;
+    height: 40px;   
+}
+
+footer p {
+    margin: 11px;
+}
+
+footer p:hover {
+    color: cadetblue;
+}
+
+footer a {
+    color: white;
+}
