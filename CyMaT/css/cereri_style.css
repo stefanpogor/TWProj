@@ -52,6 +52,27 @@ textarea {
     margin: 0px 0px 0px 10px;
 }
 
+.atmt a{
+    color: white;
+}
+
+.atmt{
+    background-color: black;
+    border: 0;
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.signoutbtn{
+    background-color: rgb(160, 95, 95);
+    border: 0;
+    border-radius: 8px;
+    color: white;
+    height: 25px;
+}
+
 /*.answ {
     background-color: rgb(95, 134, 160);
     border: 0;

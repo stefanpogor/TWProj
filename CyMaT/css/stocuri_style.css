@@ -45,6 +45,16 @@
     margin: 5px 5px 5px 0px;
 }
 
+.del {
+    background-color: rgb(160, 95, 95);
+    border: 0;
+    border-radius: 8px;
+    color: white;
+    width: auto;
+    height: 35px;
+    margin: 5px 5px 5px 0px;
+}
+
 label {
     font-size: 13px;
 }
@@ -102,7 +112,6 @@ label {
     .stoc-card {
         grid-template-areas: "imag" "info";
         grid-template-columns: auto;
-        grid-template-rows: 30% 70%;
         justify-content: center;
     }
 
@@ -114,5 +123,15 @@ label {
         padding: 0;
         padding-top: 15px;
         padding-bottom: 15px;;
+    }
+
+    .send_com {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (min-width: 551px) and (max-width: 604px) {
+    .send_com {
+        margin-top: 10px;
     }
 }
