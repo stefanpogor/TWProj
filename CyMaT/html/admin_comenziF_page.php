@@ -23,9 +23,12 @@ $data=array();
         <img class="logo" src="../res/logo.png" alt="logo">
         <nav>
             <ul class="nav_links">
-                <li><a href="../html/contact.php">Contact</a></li>
-                <li><a href="../html/signup.php">Sign up</a></li>
-                <li><a href="../html/login.php">Login</a></li>
+                <li><a>Bun venit, admin!</a></li>
+                <li>
+                    <form method="post" action="../includes/logout.inc.php">
+                        <button class="signoutbtn" type="submit">SIGNOUT</button>
+                    </form>
+                </li>
             </ul>
         </nav>
     </header>
@@ -46,9 +49,11 @@ $data=array();
                 <div class="comanda_noua">
                     <p>Trimite comanda catre furnizor</p>
                     <form action="../includes/addcomf.inc.php" method="post">
-                        <input class="com_form" placeholder="Nume Produs" type="text" name="nume-produs">
+                        <input class="com_form" placeholder="Nume Produs" type="text" name="nume-produs" onkeyup="showHint(this.value)">
+                        <p>Sugestii: <span id="txtHint"></span></p>
 
-                        <input class="com_form" placeholder="Nume Furnizor" type="text" name="nume-furnizor">
+                        <input class="com_form" placeholder="Nume Furnizor" type="text" name="nume-furnizor" onkeyup="showHint2(this.value)">
+                        <p>Sugestii: <span id="txtHint2"></span></p>
 
                         <input class="com_form" placeholder="Email Furnizor" type="text" name="email">
 
@@ -102,5 +107,40 @@ $data=array();
     <footer>
         <p> Copyright 2022 <a href="../html/scholarly.html">Scholarly</a></p>
     </footer>
+    <script>
+        function showHint(str) {
+
+            if (str.length == 0) {
+                document.getElementById("txtHint").innerHTML = "";
+                return;
+            } 
+            else {
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                            document.getElementById("txtHint").innerHTML = this.responseText;
+                        }
+                    }
+                    xmlhttp.open("GET", "gethint.php?q="+str, true);
+                    xmlhttp.send();
+                }
+            }
+        function showHint2(str) {
+            if (str.length == 0) {
+                document.getElementById("txtHint2").innerHTML = "";
+                return;
+            } 
+            else {
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                            document.getElementById("txtHint2").innerHTML = this.responseText;
+                        }
+                    }
+                    xmlhttp.open("GET", "getproviderhint.php?q="+str, true);
+                    xmlhttp.send();
+                }
+        }
+    </script>
 </body>
 </html>

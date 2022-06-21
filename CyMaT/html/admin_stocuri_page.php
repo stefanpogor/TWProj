@@ -22,9 +22,12 @@ $result=mysqli_query($conn, $sql);
         <img class="logo" src="../res/logo.png" alt="logo">
         <nav>
             <ul class="nav_links">
-                <li><a href="../html/contact.php">Contact</a></li>
-                <li><a href="../html/signup.php">Sign up</a></li>
-                <li><a href="../html/login.php">Login</a></li>
+                <li><a>Bun venit, admin!</a></li>
+                <li>
+                    <form method="post" action="../includes/logout.inc.php">
+                        <button class="signoutbtn" type="submit">SIGNOUT</button>
+                    </form>
+                </li>
             </ul>
         </nav>
     </header>
@@ -42,12 +45,20 @@ $result=mysqli_query($conn, $sql);
 
         <div class="right-content">
             <div class="produs_nou_card">
+            <form>
+                <input type="text" placeholder="Cautare produs..." size="30" onkeyup="showResult(this.value)">
+                <div id="livesearch"></div>
+            </form>
+            </div>
+            <div class="produs_nou_card">
                 <div class="produs_nou">
                     <p>Adauga un produs nou</p>
                     <form action="../includes/addproduct.inc.php" method="post" enctype="multipart/form-data">
-                        <input class="com_form" placeholder="Nume Produs" type="text" name="nume-produs">
+                        <input class="com_form" placeholder="Nume Produs" type="text" name="nume-produs" onkeyup="showHint(this.value)">
+                        <p>Sugestii: <span id="txtHint"></span></p>
 
-                        <input class="com_form" placeholder="Nume Furnizor" type="text" name="nume-furnizor">
+                        <input class="com_form" placeholder="Nume Furnizor" type="text" name="nume-furnizor" onkeyup="showHint2(this.value)">
+                        <p>Sugestii: <span id="txtHint2"></span></p>
 
                         <input class="com_form" placeholder="Pret (RON)" type="text" name="pret">
 
@@ -65,7 +76,7 @@ $result=mysqli_query($conn, $sql);
             ?>
 
             <div class="stoc-card">
-                <div class="info">
+                <div class="info" id= <?php echo $row['pid']?> >
                     <p>Denumire: <?php echo $row['pname'] ?></p>
                     <p>Furnizor: <?php echo $row['pprovider'] ?></p>
                     <p>Stoc: <?php echo $row['pcount'] ?></p>
@@ -104,5 +115,62 @@ $result=mysqli_query($conn, $sql);
     <footer>
         <p> Copyright 2022 <a href="../html/scholarly.html">Scholarly</a></p>
     </footer>
+
+    <script>
+        function showResult(str) {
+            if (str.length==0) {
+                document.getElementById("livesearch").innerHTML="";
+                document.getElementById("livesearch").style.border="0px";
+                return;
+            }
+            else {
+            var xmlhttp=new XMLHttpRequest();
+            xmlhttp.onreadystatechange=function() {
+                if (this.readyState==4 && this.status==200) {
+                    document.getElementById("livesearch").innerHTML=this.responseText;
+                    document.getElementById("livesearch").style.border="1px solid #A5ACB2";
+                }
+            }
+            xmlhttp.open("GET","livesearch.php?q="+str,true);
+            xmlhttp.send();
+            }
+        }
+
+        function showHint(str) {
+
+            if (str.length == 0) {
+                document.getElementById("txtHint").innerHTML = "";
+                return;
+            } 
+            else {
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                            document.getElementById("txtHint").innerHTML = this.responseText;
+                        }
+                    }
+                    xmlhttp.open("GET", "gethint.php?q="+str, true);
+                    xmlhttp.send();
+                }
+        }
+
+        function showHint2(str) {
+
+            if (str.length == 0) {
+                document.getElementById("txtHint2").innerHTML = "";
+                return;
+            } 
+            else {
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                            document.getElementById("txtHint2").innerHTML = this.responseText;
+                        }
+                    }
+                    xmlhttp.open("GET", "getproviderhint.php?q="+str, true);
+                    xmlhttp.send();
+                }
+        }
+    </script>
 </body>
 </html>

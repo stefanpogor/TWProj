@@ -1,0 +1,5 @@
+ID,ORDERED PRODUCT NAME,ORDER PROVIDER,EMAIL PROVIDER,STOCK REQUIRED,ORDER PRICE,ORDER DELIVERY APPRAISAL,DELIVERED
+22,Pedale bicicleta,West Biking,wstbking@bike.com,10,5520,2022-06-23,1
+23,Scaun bicicleta,Taurus,taurus@office.com,5,2175,2022-06-22,0
+24,"Roata fata bicicleta 29""",Taurus,taurus@office.com,7,882,2022-06-14,1
+,Lant bicicleta,,,,,,

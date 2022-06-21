@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link rel="stylesheet" href="../css/scholarly_style.css">
+    <title>Scholarly HTML</title>
+</head>
+
+<body prefix="schema: http://schema.org" itemscope="" itemtype="http://schema.org/WebPage">
+    <h1>CyMaT - Scholarly </h1>
+    <section typeof="sa:AuthorsList">
+        <h2>Autori</h2>
+        <ul>
+            <li typeof="sa:ContributorRole" property="schema:author">
+                <a typeof="schema:Person" href="https://github.com/stefanpogor">
+                    <meta property="schema:givenName" content="Ștefan" />
+                    <meta property="schema:familyName" content="Pogor" />
+                    <span property="schema:name">Ștefan Pogor</span>
+                </a>
+                <ul>
+                    <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                        <p>E-mail: pogorstefan@gmail.com</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li typeof="sa:ContributorRole" property="schema:author">
+                <a typeof="schema:Person" href="https://github.com/evelynatincu">
+                    <meta property="schema:givenName" content="Evelyna" />
+                    <meta property="schema:familyName" content="Tincu" />
+                    <span property="schema:name">Evelyna Tincu</span>
+                </a>
+                <ul>
+                    <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                        <p>E-mail: tincu_evelyna@yahoo.com</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <h2>Cuprins</h2>
+    <ul>
+        <li><a href="#introducere">Introducere</a> </li>
+    </ul>
+
+    <ul>
+        <li><a href="#functionalitati">Funcționalități - Ghid de utilizare</a> </li>
+    </ul>
+    <ul>
+        <li><a href="#client">1. Client</a></li>
+        <li><a href="#autentif-inreg">1.1 Autentificare/Înregistrare</a></li>
+        <li><a href="#realizare-programare">1.2 Realizarea unei programări și descrierea problemei de către client</a></li>
+        <li><a href="#contact">1.3 Contact</a></li>
+        <li><a href="#admin">2. Administrator</a></li>
+        <li><a href="#admin-cereri">2.1 Administrator - Cereri</a></li>
+        <li><a href="#admin-stocuri">2.2 Administrator - Stocuri</a></li>
+        <li><a href="#admin-comenziF">2.3 Administrator - Comenzi furnizor</a></li>
+        <li><a href="#admin-import">2.4 Administrator - Import</a></li>
+        <li><a href="#admin-export">2.5 Administrator - Export</a></li>
+    </ul>
+    <ul>
+        <li><a href="#bibliografie">Bibliografie</a> </li>
+    </ul>
+
+    <article id="article" typeof="schema:ScholarlyArticle" resource="#">
+        <section typeof="sa:ScholarlyArticle" role="doc-introduction">
+            <h2 id="introducere">Introducere</h2>
+            <p>
+                Site-ul CyMaT reprezintă un sistem online de management al programărilor și stocurilor unui service de
+                biciclete.
+                Scopul principal al sitului este de a ajuta administratorul să-și gestioneze mai ușor operațiunile și de
+                a ajuta clientul
+                să-și repare bicicleta sau să schimbe anumite piese.
+            </p>
+        </section>
+
+        <section typeof="sa:MaterialsAndMethods" role="doc-chapter">
+            <h2 id="functionalitati">Funcționalități - Ghid de utilizare</h2>
+            <h3 id="client">1. Client</h3>
+            <h3 id="autentif-inreg">1.1 Autentificare/Înregistrare</h3>
+            <p>
+                User-ul care deține deja un cont va introduce numele de utilizator și parola pentru autentificare,
+                respectiv user-ul care nu are un cont va introduce
+                pe lângă acestea și adresa de e-mail și numele complet pentru crearea unui cont. Datele introduse, după
+                validare, vor fi trimise către server.
+            </p>
+
+            <img src="../guide_img/sign_up.png" alt="autentif-inreg" style="width:1000px;">
+            <p>Pași pentru crearea contului:</p>
+            <p>1. Introdu numele;</p>
+            <p>2. Introdu e-mail-ul;</p>
+            <p>3. Introdu parola;</p>
+            <p>4. Confirmă parola;</p>
+            <p>5. Apasă butonul de "Sign Up" pentru a crea astfel contul.</p>
+            <br>
+
+            <img src="../guide_img/login.png" alt="autentif-inreg" style="width:1000px;">
+            <p>Pași pentru autentificare:</p>
+            <p>1. Introdu e-mail-ul;</p>
+            <p>2. Introdu parola;</p>
+            <p>3. Apasă butonul de "Login" pentru a te autentifica.</p>
+
+            <h3 id="realizare-programare">1.2 Realizarea unei programări și descrierea problemei de către client</h3>
+            <p>
+                Clientul service-ului va putea completa un formular în care trebuie să aleagă o zi dintre cele
+                disponibile și va trebui să completeze spațiul special alocat
+                descrierii problemei ce urmează a fi evaluată de către administrator. Cererea lui va fi fie acceptată,
+                fie refuzată după evaluare. Răspunsul va fi afișat după formular.
+            </p>
+            <img src="../guide_img/form_client.png" alt="realizare-programare" style="width:1000px;">
+            <p>Pași pentru trimiterea formularului:</p>
+            <p>1. Introdu prenumele;</p>
+            <p>2. Introdu numele;</p>
+            <p>3. Încarcă poza;</p>
+            <p>4. Fă o programare;</p>
+            <p>5. Descrie problema;</p>
+            <p>6. Apasă butonul de "Trimite" pentru a trimite formularul către echipa CyMat.</p>
+            <br>
+
+            <h3 id="contact">1.3 Contact</h3>
+            <p>
+                Clienții vor putea lua legătura cu administratorul sitului pentru orice eventuale probleme sau
+                întrebări.
+            </p>
+            <img src="../guide_img/contact.png" alt="contact" style="width:1000px;">
+            <p>Pași pentru trimiterea unei/unor întrebări:</p>
+            <p>1. Introdu numele;</p>
+            <p>2. Introdu e-mail-ul;</p>
+            <p>3. Introdu subiectul mesajului;</p>
+            <p>4. Introdu mesajul;</p>
+            <p>5. Apasă butonul de "Trimite" pentru a trimite mesajul către echipa CyMat.</p>
+            <br>
+
+            <h3 id="admin">2. Administrator</h3>
+            <h3 id="admin-cereri">2.1 Administrator - Cereri</h3>
+            <p>
+                Persoana responsabilă de evaluarea cererilor trimise de către clienți va putea accesa secțiunea "Cereri"
+                din cadrul sitului, după autentificare, unde are posibilitatea de
+                a trimite un mesaj de răspuns și prețul aferent serviciilor prestate. Acesta va trebui să accepte sau
+                refuze (în funcție de situație) o cerere pentru a putea fi trimis mesajul către client.
+            </p>
+            <img src="../guide_img/admin_cerere.png" alt="admin-cerere" style="width:1000px;">
+            <p>Pași pentru trimiterea unui răspuns către client:</p>
+            <p>1. Introdu răspunsul;</p>
+            <p>2. Introdu prețul;</p>
+            <p>Dacă accepți cererea clientului, atunci:</p>
+            <p>3. Apasă butonul de "Accepta".</p>
+            <p>Dacă refuzi cererea clientului, atunci:</p>
+            <p>4. Apasă butonul de "Refuza".</p>
+            <br>
+            <br>
+            <img src="../guide_img/admin_cereri.png" alt="admin-cereri" style="width:1000px;">
+            <p>Administratorul mai are opțiunea de a vedea poza trimisă ca atașament în formular de către client. Pentru a vizualiza atașamentul:</p>
+            <p>1. Apasă butonul de "Atasament".</p>
+            <br>
+
+            <h3 id="admin-stocuri">2.2 Administrator - Stocuri</h3>
+            <p>
+                În această secțiune administratorul va putea adăuga un produs nou după completarea formularului sau va
+                putea actualiza prețul/stocul produselor deja existente.
+            </p>
+            <img src="../guide_img/admin_stocuri.PNG" alt="admin-stocuri" style="width:1000px;">
+            <p>Pași pentru adăugarea unui nou produs:</p>
+            <p>1. Introdu numele produsului;</p>
+            <p>2. Introdu numele furnizorului;</p>
+            <p>3. Introdu prețul;</p>
+            <p>4. Introdu cantitatea;</p>
+            <p>5. Încarcă o imagine;</p>
+            <p>6. Apasă butonul de "Adauga produs" pentru a adăuga un nou produs.</p>
+            <br>
+            <p>Dacă vrei să cauți un anumit produs în toată lista, atunci:</p>
+            <p>7. Apasă pe câmpul de "Cautare produs..." și introdu numele produsului pe care îl cauți.</p>
+            <p>Când ai găsit produsul pe care îl căutai, apasă pe el și te va duce direct la stocul acestuia.</p>
+            <br>
+            <p>Pentru a actualiza prețul/stocul produselor deja existente, urmează acești pași:</p>
+            <img src="../guide_img/admin_produs.PNG" alt="admin-produs" style="width:1000px;">
+            <p>1. Introdu noua cantitate;</p>
+            <p>2. Apasă butonul de "Actualizeaza stoc" pentru a adăuga o nouă cantitate;</p>
+            <p>3. Introdu noul preț;</p>
+            <p>4. Apasă butonul de "Actualizeaza pret" pentru a adăuga un nou preț;</p>
+            <br>
+            <p>Dacă vrei să ștergi un produs, atunci:</p>
+            <p>5. Apasă butonul de "Sterge produs".</p>
+            <br>
+
+            <h3 id="admin-comenziF">2.3 Administrator - Comenzi furnizor</h3>
+            <p>
+                Aici vor putea fi vizualizate informații legate de comenzile plasate către un anumit furnizor, cum ar
+                fi: estimat de livrare, preț, cantitate comandată etc.. De altfel, vor putea fi plasate
+                și comenzi noi către un furnizor.
+            </p>
+            <img src="../guide_img/admin_comenzi.PNG" alt="admin-comenziF" style="width:1000px;">
+            <p>Pași pentru trimiterea unei comenzi unui furnizor:</p>
+            <p>1. Introdu numele produsului;</p>
+            <p>2. Introdu numele furnizorului;</p>
+            <p>3. Introdu e-mail-ul furnizorului;</p>
+            <p>4. Introdu cantitea produsului;</p>
+            <p>5. Apasă butonul de "Trimite comanda" pentru a trimite comanda către furnizor.</p>
+            <br>
+            <p>Pentru fiecare comandă trimisă, există opțiunea de a o șterge:</p>
+            <img src="../guide_img/admin_comanda.PNG" alt="admin-comenziF" style="width:1000px;">
+            <p>1. Apasă butonul de "Sterge comanda" pentru a putea șterge comanda respectivă.</p>
+
+            <h3 id="admin-import">2.4 Administrator - Import</h3>
+            <p>
+                Administratorul va avea posibilitatea importării de fișiere .csv/.json în care pot exista mai multe
+                produse/comenzi către furnizori ce vor fi încărcate automat în cadrul sitului, astfel evitând plasarea
+                lor manual, rând pe rând.
+            </p>
+            <img src="../guide_img/admin_import.png" alt="admin-import" style="width:1000px;">
+            <p>Pași pentru importare:</p>
+            <p>1. Încarcă poza;</p>
+            <p>2. Alege dacă vrei să imporți lista cu produse sau lista cu comenzile către furnizori din meniul dropdown;</p>
+            <p>3. Apasă butonul de "Import" pentru a importa lista.</p>
+            <br>
+
+            <h3 id="admin-export">2.5 Administrator - Export</h3>
+            <p>
+                În cadrul acestei secțiuni administratorul va putea exporta în format .csv/.json/.pdf produsele
+                existente pe site sau comenzile către furnizori, având posibilitatea de modificare și reîncărcarea
+                ulterioară pe sit, folosind secțiunea import.
+            </p>
+            <img src="../guide_img/admin_export.PNG" alt="admin-export" style="width:1000px;">
+            <p>Pași pentru exportare:</p>
+            <p>1. Alege dacă vrei să imporți lista cu produse sau lista cu comenzile către furnizori din meniul dropdown;</p>
+            <p>2. Alege formatul fișierului pe care îl dorești din meniul dropdown;</p>
+            <p>3. Apasă butonul de "Export" pentru a importa lista.</p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <p>Atât administratorul, cât și clientul au opțiunea de a se deconecta: </p>
+            <img src="../guide_img/sign_out.PNG" alt="sign-out" style="width:1000px;">
+            <p>1. Apasă pe butonul de "SIGNOUT."</p>
+
+        </section>
+        
+        <section typeof="sa:ReferenceList" role="doc-bibliography">
+            <h2 id="bibliografie">Bibliografie</h2>
+            <ol>
+                <li property="schema:citation" role="doc-biblioentry" typeof="schema:WebPage"
+                    resource="https://www.w3schools.com">
+                    <cite property="schema:name">
+                        <a href="https://www.w3schools.com">W3 schools</a>
+                    </cite>
+                </li>
+                <li property="schema:citation" role="doc-biblioentry" typeof="schema:WebPage"
+                    resource="https://w3c.github.io/scholarly-html/">
+                    <cite property="schema:name">
+                        <a href="https://w3c.github.io/scholarly-html/">Scholarly HTML</a>
+                    </cite>
+                </li>
+                <li property="schema:citation" role="doc-biblioentry" typeof="schema:WebPage"
+                    resource="https://schema.org/Person">
+                    <cite property="schema:name">
+                        <a href="https://schema.org/Person">Scholarly Person</a>
+                    </cite>
+                </li>
+            </ol>
+        </section>
+    </article>
+</body>
+
+</html>

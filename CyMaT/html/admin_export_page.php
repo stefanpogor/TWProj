@@ -15,9 +15,12 @@
         <img class="logo" src="../res/logo.png" alt="logo">
         <nav>
             <ul class="nav_links">
-                <li><a href="../html/contact.php">Contact</a></li>
-                <li><a href="../html/signup.php">Sign up</a></li>
-                <li><a href="../html/login.php">Login</a></li>
+                <li><a>Bun venit, admin!</a></li>
+                <li>
+                    <form method="post" action="../includes/logout.inc.php">
+                        <button class="signoutbtn" type="submit">SIGNOUT</button>
+                    </form>
+                </li>
             </ul>
         </nav>
     </header>
@@ -40,6 +43,12 @@
                     <select class="arrange" name="where" id="where">
                         <option value="produse">Produse</option>
                         <option value="comenzi-furnizori">Comenzi furnizori</option>
+                    </select>
+                    <label for="where">Selectati formatul dorit:</label>
+                    <select class="arrange" name="filetype">
+                        <option value="csv">CSV</option>
+                        <option value="json">JSON</option>
+                        <option value="pdf">PDF</optin>
                     </select>
                     <button class="import-btn" name="exportbtn">Export</button>
                 </form>
